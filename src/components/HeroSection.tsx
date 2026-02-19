@@ -90,10 +90,12 @@ const HeroSection = () => {
 
         {/* Right — avatar placeholder */}
         <div className="lg:col-span-2 flex justify-center">
-          <div className="relative">
-            <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-secondary flex items-center justify-center purple-glow border-2 border-primary/30">
-              <span className="text-6xl font-bold gradient-text">SR</span>
-            </div>
+        <div className="relative">
+            <img
+              src="/headshot.jpg"
+              alt="Shams Rupak"
+              className="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover purple-glow border-2 border-primary/30"
+            />
             <div className="absolute -inset-4 rounded-full border border-primary/10 animate-pulse pointer-events-none" />
           </div>
         </div>
