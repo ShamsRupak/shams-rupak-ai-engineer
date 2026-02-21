@@ -3,11 +3,9 @@ import { MapPin, FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const terminalLines = [
-  "deploying ML pipelines...",
-  "building RAG systems...",
-  "shipping production code...",
-  "optimizing model inference...",
-  "automating document workflows...",
+  "Building backend systems & ML pipelines",
+  "C++ · Python · PyTorch · Docker · PostgreSQL",
+  "Open to SWE / ML roles — 2026",
 ];
 
 const HeroSection = () => {
@@ -48,7 +46,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl sm:text-2xl font-medium text-muted-foreground">
-            Software Engineer · AI/ML Engineer
+            Software Engineer | AI/ML Engineer
           </p>
 
           <p className="text-base text-muted-foreground max-w-lg leading-relaxed">

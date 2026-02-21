@@ -5,6 +5,20 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    title: "CacheCraft — Concurrent In-Memory Cache Server",
+    description:
+      "Redis-inspired TCP cache server with O(1) LRU eviction, TTL expiration, and sharded thread-safe storage. Benchmarked throughput with p50/p95/p99 latency. Cross-platform CI with sanitizer builds (ASAN/UBSAN).",
+    tech: ["C++20", "TCP Networking", "Concurrency", "ASAN/UBSAN", "CI/CD"],
+    github: "https://github.com/ShamsRupak/cachecraft",
+  },
+  {
+    title: "PulseAPI — Production Backend Service",
+    description:
+      "REST API with JWT authentication, RBAC, PostgreSQL data modeling and migrations, Redis caching and rate limiting, and health/metrics endpoints. Containerized with Docker Compose and enforced via automated testing and CI pipelines.",
+    tech: ["FastAPI", "PostgreSQL", "Redis", "Docker", "JWT", "GitHub Actions"],
+    github: "https://github.com/ShamsRupak/pulseapi",
+  },
+  {
     title: "AI Document Processing Suite",
     description:
       "Built scalable document ingestion and classification system using PyMuPDF and OCR for structured financial data extraction. Developed embedding-based semantic retrieval pipeline enabling contextual document Q&A.",
@@ -24,13 +38,6 @@ const projects = [
       "Full ML pipeline from EDA to feature engineering to model training with XGBoost and scikit-learn for accurate NYC temperature trend predictions.",
     tech: ["XGBoost", "scikit-learn", "Pandas", "Python"],
     github: "https://github.com/ShamsRupak/nyc-weather-prediction",
-  },
-  {
-    title: "Voice Bot QA Testing System",
-    description:
-      "Automated QA system that makes real phone calls to AI healthcare agents, simulating patient scenarios with real-time voice processing and GPT-4o-mini for automated bug report generation.",
-    tech: ["Python", "Twilio", "Deepgram", "GPT-4o-mini"],
-    github: null,
   },
 ];
 

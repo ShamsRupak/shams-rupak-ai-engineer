@@ -6,13 +6,13 @@ const educations = [
     degree: "M.S. Engineering Artificial Intelligence",
     school: "Stony Brook University",
     dates: "Aug 2025 – Dec 2026",
-    coursework: "Machine Learning, Deep Learning, AI for Robotics",
+    coursework: "Data Structures & Algorithms · Object-Oriented Programming (C++) · Software Engineering · Machine Learning · Deep Learning · AI for Robotics",
   },
   {
     degree: "B.S. Applied Mathematics & Statistics",
     school: "Stony Brook University",
     dates: "Aug 2021 – May 2025",
-    coursework: "Data Structures & Algorithms, OOP, Probability Theory",
+    coursework: "Applied Mathematics · Probability Theory · Linear Algebra · Statistics · OOP",
   },
 ];
 
