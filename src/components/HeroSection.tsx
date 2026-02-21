@@ -14,7 +14,7 @@ const HeroSection = () => {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = terminalLines[lineIndex];
+    const current = terminalLines[lineIndex] ?? "";
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!deleting && charIndex < current.length) {
@@ -64,7 +64,7 @@ const HeroSection = () => {
               <span className="text-primary">~/shams</span>
               <span className="text-foreground"> $ </span>
               <span className="text-foreground">
-                {terminalLines[lineIndex].substring(0, charIndex)}
+                {(terminalLines[lineIndex] ?? "").substring(0, charIndex)}
               </span>
               <span className="inline-block w-2 h-4 bg-primary ml-0.5 animate-terminal-blink" />
             </div>
