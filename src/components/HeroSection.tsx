@@ -74,7 +74,7 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap gap-4 pt-2">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80">
-              <a href="/Shams_Rupak_Software_Engineer.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Shams_Rupak_Software_Engineer_2026.pdf" target="_blank" rel="noopener noreferrer">
                 <FileText size={16} />
                 View Resume
               </a>
