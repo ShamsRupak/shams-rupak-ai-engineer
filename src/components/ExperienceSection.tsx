@@ -3,12 +3,21 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    title: "Teaching Assistant — C++ OOP",
+    title: "Teaching Assistant — Object-Oriented Programming (C++)",
     company: "Stony Brook University",
     dates: "Jan 2026 – Present",
     points: [
-      "Support 30+ students in core C++ systems course covering OOP design, STL containers, dynamic memory, RAII, and debugging.",
-      "Lead code reviews emphasizing modular architecture, algorithmic efficiency, and runtime performance optimization.",
+      "Mentored 30+ students in C++ systems programming, covering OOP design, STL containers, dynamic memory, RAII, and pointer safety.",
+      "Debugged segmentation faults, memory leaks, and logic errors; conducted code reviews emphasizing correctness, modularity, and performance.",
+    ],
+  },
+  {
+    title: "Sales Specialist",
+    company: "Apple",
+    dates: "Aug 2025 – Oct 2025",
+    points: [
+      "Delivered the Apple retail experience — product consultation, hands-on demos, and technical guidance across the full Apple ecosystem.",
+      "Consistent top performer in customer satisfaction and sales metrics.",
     ],
   },
   {
@@ -16,9 +25,17 @@ const experiences = [
     company: "Outamation",
     dates: "May 2025 – Jul 2025",
     points: [
-      "Designed and deployed modular AI document processing pipeline in Python (PyMuPDF, Tesseract OCR, NLP, LLM classification) across 1,000+ financial documents, reducing manual processing time 60%.",
-      "Implemented RAG using LlamaIndex, contextual chunking, and embedding-based semantic search.",
-      "Benchmarked transformer-based models across latency, context window, and precision trade-offs.",
+      "Designed and implemented a Python-based document processing pipeline ingesting 1,000+ financial documents with OCR, validation, and classification stages.",
+      "Increased throughput by 60% by optimizing I/O, reducing redundant computation, and refactoring monolithic logic into reusable, testable components.",
+    ],
+  },
+  {
+    title: "Retail Mobile Expert",
+    company: "T-Mobile",
+    dates: "Jul 2024 – May 2025",
+    points: [
+      "Consultative sales across T-Mobile's full product ecosystem — devices, plans, home internet, and accessories.",
+      "Diagnosed technical issues, performed device troubleshooting, and delivered personalized solutions in a high-volume retail environment.",
     ],
   },
   {
@@ -26,8 +43,8 @@ const experiences = [
     company: "Webacy",
     dates: "Sep 2024 – Nov 2024",
     points: [
-      "Applied unsupervised learning and clustering to detect anomalous blockchain transactions and smart contract vulnerabilities.",
-      "Improved labeled dataset reliability 95%+.",
+      "Applied unsupervised ML and clustering to detect anomalous blockchain transactions and smart contract vulnerabilities.",
+      "Achieved 95%+ accuracy in labeled dataset reliability for risk categorization.",
     ],
   },
 ];

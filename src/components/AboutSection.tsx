@@ -2,10 +2,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useEffect, useState, useRef } from "react";
 
 const metrics = [
-  { value: 60, suffix: "%", label: "Processing Time Reduced" },
-  { value: 95, suffix: "%+", label: "Detection Accuracy" },
-  { value: 1000, suffix: "+", label: "Docs Automated" },
-  { value: 30, suffix: "M+", label: "Content Views" },
+  { value: 60, suffix: "%", label: "Pipeline Throughput Increase" },
+  { value: 0, suffix: "O(1)", label: "LRU Eviction Cache Server", isText: true },
+  { value: 1000, suffix: "+", label: "Financial Documents Processed" },
+  { value: 95, suffix: "%+", label: "Blockchain Risk Detection Accuracy" },
+  { value: 30, suffix: "+", label: "Students Mentored in C++ Systems" },
+  { value: 30, suffix: "M+", label: "Fitness Content Views" },
 ];
 
 function CountUp({ target, suffix, start }: { target: number; suffix: string; start: boolean }) {
@@ -58,14 +60,18 @@ const AboutSection = () => {
           and optimizing end-to-end ML pipelines, RAG systems, and OCR-based document automation.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {metrics.map((m, i) => (
             <div
               key={i}
               className="glass-card rounded-xl p-5 text-center space-y-2"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              <CountUp target={m.value} suffix={m.suffix} start={isVisible} />
+              {(m as any).isText ? (
+                <span className="text-3xl sm:text-4xl font-bold gradient-text">{m.suffix}</span>
+              ) : (
+                <CountUp target={m.value} suffix={m.suffix} start={isVisible} />
+              )}
               <p className="text-xs sm:text-sm text-muted-foreground">{m.label}</p>
             </div>
           ))}

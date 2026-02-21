@@ -4,19 +4,23 @@ import { Badge } from "@/components/ui/badge";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C++", "Java", "SQL", "JavaScript", "C", "R"],
+    skills: ["C++", "Python", "Java", "SQL", "JavaScript", "C"],
   },
   {
-    title: "ML & AI",
-    skills: ["PyTorch", "scikit-learn", "XGBoost", "LLMs", "RAG", "LlamaIndex", "NLP", "OCR", "Embeddings", "Semantic Search", "Feature Engineering"],
+    title: "Backend & Systems",
+    skills: ["FastAPI", "REST APIs", "JWT Auth", "RBAC", "Redis", "PostgreSQL", "Docker", "GitHub Actions CI/CD", "CMake", "Linux", "Alembic"],
   },
   {
-    title: "Systems & Data",
-    skills: ["DSA", "OOP", "STL", "Memory Management", "NumPy", "Pandas", "REST APIs", "ETL Pipelines", "Git", "Linux"],
+    title: "Testing & Quality",
+    skills: ["Unit & Integration Testing", "ASAN/UBSAN Sanitizers", "CI Pipelines", "GDB", "Valgrind"],
   },
   {
-    title: "Web",
-    skills: ["React", "HTML/CSS", "Chrome Extensions"],
+    title: "AI / ML / Data Science",
+    skills: ["PyTorch", "scikit-learn", "LlamaIndex", "LLMs", "NLP", "OCR", "Embeddings", "XGBoost", "RAG"],
+  },
+  {
+    title: "Web & Tools",
+    skills: ["React", "Chrome Extensions", "HTML/CSS", "NumPy", "Pandas", "Git"],
   },
 ];
 
