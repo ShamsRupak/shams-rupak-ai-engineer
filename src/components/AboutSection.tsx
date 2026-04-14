@@ -2,12 +2,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useEffect, useState, useRef } from "react";
 
 const metrics = [
-  { value: 60, suffix: "%", label: "Pipeline Throughput Increase" },
-  { value: 0, suffix: "O(1)", label: "LRU Eviction Cache Server", isText: true },
-  { value: 1000, suffix: "+", label: "Financial Documents Processed" },
-  { value: 95, suffix: "%+", label: "Blockchain Risk Detection Accuracy" },
-  { value: 30, suffix: "+", label: "Students Mentored in C++ Systems" },
-  { value: 30, suffix: "M+", label: "Fitness Content Views" },
+  { value: 304, suffix: "K rec/s", label: "Event Streaming Throughput" },
+  { value: 500, suffix: "+", label: "Tests Across All Projects" },
+  { value: 207, suffix: "", label: "Tests in Agent Platform" },
+  { value: 112, suffix: "", label: "Tests in Compiler & Transformer" },
+  { value: 60, suffix: "%", label: "Processing Time Reduced" },
+  { value: 1000, suffix: "+", label: "Documents Automated" },
 ];
 
 function CountUp({ target, suffix, start }: { target: number; suffix: string; start: boolean }) {
@@ -55,9 +55,10 @@ const AboutSection = () => {
 
         <p className="text-muted-foreground leading-relaxed max-w-3xl text-base sm:text-lg mb-12">
           M.S. Engineering Artificial Intelligence candidate (Dec 2026) at Stony Brook University
-          with a B.S. in Applied Mathematics & Statistics. Strong foundations in machine learning,
-          C++ systems programming, and scalable systems design. Experienced designing, deploying,
-          and optimizing end-to-end ML pipelines, RAG systems, and OCR-based document automation.
+          with a B.S. in Applied Mathematics & Statistics. I build production systems end-to-end:
+          from a compiled programming language in C++20 to a high-throughput event streaming engine
+          in Rust (304K rec/s) to deployed ML monitoring dashboards with real-time drift detection.
+          500+ tests across 10 projects. I write tested, maintainable code with high ownership.
         </p>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -67,11 +68,7 @@ const AboutSection = () => {
               className="glass-card rounded-xl p-5 text-center space-y-2"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              {(m as any).isText ? (
-                <span className="text-3xl sm:text-4xl font-bold gradient-text">{m.suffix}</span>
-              ) : (
-                <CountUp target={m.value} suffix={m.suffix} start={isVisible} />
-              )}
+              <CountUp target={m.value} suffix={m.suffix} start={isVisible} />
               <p className="text-xs sm:text-sm text-muted-foreground">{m.label}</p>
             </div>
           ))}

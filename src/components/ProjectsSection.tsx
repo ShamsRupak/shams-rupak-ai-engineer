@@ -1,42 +1,80 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Badge } from "@/components/ui/badge";
-import { Github, Lock } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "CacheCraft — Concurrent In-Memory Cache Server",
-    description:
-      "Redis-inspired TCP cache server with O(1) LRU eviction, TTL expiration, and sharded thread-safe storage. Benchmarked throughput with p50/p95/p99 latency. Cross-platform CI with sanitizer builds (ASAN/UBSAN).",
-    tech: ["C++20", "TCP Networking", "Concurrency", "ASAN/UBSAN", "CI/CD"],
+    title: "TinyLang — Compiled Programming Language from Scratch",
+    description: "Complete programming language from scratch. Lexer, Pratt parser, type inference, 28-opcode bytecode compiler, stack-based VM with mark-sweep garbage collector. 112 tests.",
+    tech: ["C++20", "Compilers", "Bytecode", "VM", "GC"],
+    github: "https://github.com/ShamsRupak/tinylang",
+  },
+  {
+    title: "StreamForge — Event Streaming Engine from Scratch",
+    description: "Kafka-inspired streaming engine. Commit log with CRC32, TCP broker, wire protocol, producer/consumer SDKs, LZ4 compression. 304K records/sec. 73 tests.",
+    tech: ["Rust", "TCP", "Tokio", "LZ4", "Async I/O"],
+    github: "https://github.com/ShamsRupak/streamforge",
+  },
+  {
+    title: "Nexus — AI Agent Orchestration Platform",
+    description: "Enterprise agent orchestration with 6 modules. LoRA fine-tuning for Qwen-2.5, DAG planning, evaluation pipelines, Prometheus observability. 207 tests.",
+    tech: ["Python", "FastAPI", "PyTorch", "LoRA", "LLMs"],
+    github: "https://github.com/ShamsRupak/nexus",
+  },
+  {
+    title: "SentinelBoard — ML Monitoring Dashboard",
+    description: "Real-time ML monitoring with PSI drift detection, Prometheus instrumentation (p50/p95/p99), WebSocket streaming, React dashboard. 47 tests. Live deployed.",
+    tech: ["Python", "FastAPI", "React", "WebSocket", "Prometheus"],
+    github: "https://github.com/ShamsRupak/sentinelboard",
+    live: "https://sentinelboard-ui.onrender.com",
+  },
+  {
+    title: "MicroFormer — GPT Transformer from Scratch",
+    description: "GPT architecture from scratch. RoPE, RMSNorm, BPE tokenizer, MQA ablation (20.6% param reduction). FastAPI inference server with KV-cache. 112 tests.",
+    tech: ["Python", "PyTorch", "Transformers"],
+    github: "https://github.com/ShamsRupak/microformer",
+  },
+  {
+    title: "CacheCraft — Concurrent Cache Server",
+    description: "Redis-inspired TCP cache server. O(1) LRU eviction, sharded thread-safe storage, TTL expiration. Benchmarked p50/p95/p99. ASAN/UBSAN CI.",
+    tech: ["C++20", "TCP", "Concurrency", "Threads"],
     github: "https://github.com/ShamsRupak/cachecraft",
   },
   {
+    title: "SAGE — LLM Research Agent",
+    description: "Autonomous research agent with DAG-based hierarchical planner, ReAct tool-use loop, evidence critic scoring, provider-agnostic LLM failover. 59 tests.",
+    tech: ["Python", "LLM Agents", "DAG Planner", "ReAct"],
+    github: "https://github.com/ShamsRupak/sage",
+  },
+  {
+    title: "Salesforce AI Workflow",
+    description: "Automated lead qualification and opportunity risk detection. AI vs rule-based decision architecture. 71 tests, zero false classifications.",
+    tech: ["Python", "Salesforce REST API", "OpenAI", "SOQL"],
+    github: "https://github.com/ShamsRupak/salesforce-ai-workflow",
+  },
+  {
     title: "PulseAPI — Production Backend Service",
-    description:
-      "REST API with JWT authentication, RBAC, PostgreSQL data modeling and migrations, Redis caching and rate limiting, and health/metrics endpoints. Containerized with Docker Compose and enforced via automated testing and CI pipelines.",
-    tech: ["FastAPI", "PostgreSQL", "Redis", "Docker", "JWT", "GitHub Actions"],
+    description: "Production REST API with JWT auth, RBAC, PostgreSQL with Alembic migrations, Redis caching & rate limiting. Containerized with Docker Compose + CI/CD.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker"],
     github: "https://github.com/ShamsRupak/pulseapi",
   },
   {
+    title: "Insurance Risk and Claims Modeling",
+    description: "Financial modeling pipeline on 678K+ policy records. Poisson/Gamma GLM with Bayesian calibration. Risk segmentation with up to 24.6x price relativities.",
+    tech: ["Python", "R", "SQL", "Statistical Modeling"],
+    github: "https://github.com/ShamsRupak/insurance-risk-and-claims-modeling",
+  },
+  {
     title: "AI Document Processing Suite",
-    description:
-      "Built scalable document ingestion and classification system using PyMuPDF and OCR for structured financial data extraction. Developed embedding-based semantic retrieval pipeline enabling contextual document Q&A.",
-    tech: ["Python", "PyMuPDF", "Tesseract OCR", "LlamaIndex", "RAG", "NLP"],
+    description: "End-to-end pipeline processing 1,000+ financial docs with intelligent classification, OCR extraction, and embedding-based semantic retrieval. 60% throughput increase.",
+    tech: ["Python", "LlamaIndex", "RAG", "OCR"],
     github: "https://github.com/ShamsRupak/ai-doc-processing-suite",
   },
   {
-    title: "Student Buddy — AI Chrome Extension",
-    description:
-      "Engineered AI-powered Chrome extension using JavaScript and Gemini API with modular frontend architecture and scalable API integration for real-time academic assistance.",
-    tech: ["JavaScript", "Gemini API", "Chrome APIs", "HTML/CSS"],
-    github: "https://github.com/ShamsRupak/student-buddy-extension",
-  },
-  {
     title: "NYC Weather Prediction",
-    description:
-      "Full ML pipeline from EDA to feature engineering to model training with XGBoost and scikit-learn for accurate NYC temperature trend predictions.",
-    tech: ["XGBoost", "scikit-learn", "Pandas", "Python"],
+    description: "Full ML pipeline: EDA, feature engineering, XGBoost model achieving 81.4% accuracy on NYC temperature trend classification.",
+    tech: ["Python", "XGBoost", "Scikit-learn", "Pandas"],
     github: "https://github.com/ShamsRupak/nyc-weather-prediction",
   },
 ];
@@ -92,19 +130,22 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         ))}
       </div>
 
-      {project.github ? (
+      <div className="flex flex-wrap gap-3">
         <Button asChild variant="outline" size="sm" className="w-fit border-border hover:bg-secondary">
           <a href={project.github} target="_blank" rel="noopener noreferrer">
             <Github size={14} />
-            View on GitHub
+            GitHub
           </a>
         </Button>
-      ) : (
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <Lock size={12} />
-          <span>Private Repository</span>
-        </div>
-      )}
+        {project.live && (
+          <Button asChild variant="outline" size="sm" className="w-fit border-primary/30 text-primary hover:bg-primary/10">
+            <a href={project.live} target="_blank" rel="noopener noreferrer">
+              <ExternalLink size={14} />
+              Live Demo
+            </a>
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
