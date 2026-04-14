@@ -3,9 +3,12 @@ import { MapPin, FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const terminalLines = [
-  "Building backend systems & ML pipelines",
-  "C++ · Python · PyTorch · Docker · PostgreSQL",
-  "Open to SWE / ML roles — 2026",
+  "building a compiled language from scratch in C++20...",
+  "streaming 304K records/sec in Rust...",
+  "fine-tuning Qwen-2.5 with LoRA...",
+  "orchestrating AI agents with DAG planning...",
+  "monitoring ML drift in production...",
+  "open to SWE / AI/ML roles — 2026 🚀",
 ];
 
 const HeroSection = () => {
@@ -50,15 +53,15 @@ const HeroSection = () => {
           </p>
 
           <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
-            I build production ML pipelines, RAG systems, and full-stack applications.
+            I build production AI systems, compiled languages, and streaming infrastructure from scratch.
           </p>
 
           {/* Terminal */}
           <div className="glass-card rounded-lg px-4 py-3 max-w-md font-mono text-sm">
             <div className="flex items-center gap-2 mb-2">
-            <span className="w-3 h-3 rounded-full bg-destructive/70" />
-            <span className="w-3 h-3 rounded-full bg-accent/70" />
-            <span className="w-3 h-3 rounded-full bg-primary/70" />
+              <span className="w-3 h-3 rounded-full bg-destructive/70" />
+              <span className="w-3 h-3 rounded-full bg-accent/70" />
+              <span className="w-3 h-3 rounded-full bg-primary/70" />
             </div>
             <div className="text-muted-foreground">
               <span className="text-primary">~/shams</span>
@@ -72,7 +75,7 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap gap-4 pt-2">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80">
-              <a href="/Shams_Rupak_Software_Engineer_2026.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://shamsrupak.vercel.app/Shams_Rupak_Master_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <FileText size={16} />
                 View Resume
               </a>
@@ -86,13 +89,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right — avatar placeholder */}
+        {/* Right — headshot */}
         <div className="lg:col-span-2 flex justify-center">
-        <div className="relative">
+          <div className="relative">
             <img
-              src="/headshot.jpg"
+              src="/headshot.png"
               alt="Shams Rupak"
-              className="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover purple-glow border-2 border-primary/30"
+              className="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover object-top purple-glow border-2 border-primary/30"
             />
             <div className="absolute -inset-4 rounded-full border border-primary/10 animate-pulse pointer-events-none" />
           </div>

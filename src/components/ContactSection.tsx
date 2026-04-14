@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Mail, Linkedin, Github, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, Phone, Globe, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -29,7 +29,7 @@ const ContactSection = () => {
 
         <div className="flex items-center justify-center gap-6 text-muted-foreground">
           <a
-            href="https://www.linkedin.com/in/shams-rupak-262906272/"
+            href="https://linkedin.com/in/shams-rupak-262906272"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors"
@@ -59,6 +59,24 @@ const ContactSection = () => {
             aria-label="Phone"
           >
             <Phone size={22} />
+          </a>
+          <a
+            href="https://shamsrupak.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="Interactive Portfolio"
+          >
+            <Globe size={22} />
+          </a>
+          <a
+            href="https://shamsrupak.vercel.app/Shams_Rupak_Master_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+            aria-label="Resume"
+          >
+            <FileText size={22} />
           </a>
         </div>
 

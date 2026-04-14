@@ -4,23 +4,23 @@ import { Badge } from "@/components/ui/badge";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["C++", "Python", "Java", "SQL", "JavaScript", "C"],
+    skills: ["C++20 (Compilers & Systems)", "Rust (Event Streaming)", "Python (Backend & ML)", "Java (OOP)", "SQL (PostgreSQL)", "JavaScript/TypeScript (Full Stack)", "C (Low Level)"],
   },
   {
-    title: "Backend & Systems",
-    skills: ["FastAPI", "REST APIs", "JWT Auth", "RBAC", "Redis", "PostgreSQL", "Docker", "GitHub Actions CI/CD", "CMake", "Linux", "Alembic"],
-  },
-  {
-    title: "Testing & Quality",
-    skills: ["Unit & Integration Testing", "ASAN/UBSAN Sanitizers", "CI Pipelines", "GDB", "Valgrind"],
+    title: "Systems & Backend",
+    skills: ["FastAPI", "REST APIs", "JWT/OAuth2", "Redis", "PostgreSQL", "Docker", "Prometheus", "WebSockets", "GitHub Actions", "CMake", "Cargo", "Linux", "TCP", "Alembic"],
   },
   {
     title: "AI / ML / Data Science",
-    skills: ["PyTorch", "scikit-learn", "LlamaIndex", "LLMs", "NLP", "OCR", "Embeddings", "XGBoost", "RAG"],
+    skills: ["PyTorch", "Transformers (GPT)", "LoRA (Fine Tuning)", "LLM Agents (DAG)", "RAG", "Drift Detection (PSI/KL)", "scikit-learn", "LlamaIndex", "NLP", "OCR", "XGBoost"],
+  },
+  {
+    title: "Testing & Quality",
+    skills: ["500+ Tests", "ASAN/UBSAN", "CI Pipelines", "GDB & Valgrind", "Benchmarking (p50/p95/p99)"],
   },
   {
     title: "Web & Tools",
-    skills: ["React", "Chrome Extensions", "HTML/CSS", "NumPy", "Pandas", "Git"],
+    skills: ["React", "Chrome Extensions", "REST APIs", "NumPy", "Pandas"],
   },
 ];
 
